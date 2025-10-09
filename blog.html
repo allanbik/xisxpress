@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blog - X-XPRESS</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="dark_mode.css" />
+    <link rel="stylesheet" href="blog.css" />
+    <link rel="icon" href="imagens/X-XPRESS.png" />
+</head>
+
+<body>
+    <header>
+        <h1 class="titulo-principal">X-XPRESS</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="faq-section.html">FAQ</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="blog.html"  class="active">Blog</a></li>
+            </ul>
+        </nav>
+        <img id="banner" src="imagens/X-XPRESS.png" alt="Banner oficial da X-XPRESS" />
+        <button class="dark-mode-toggle">Dark Mode</button>
+    </header>
+
+    <main>
+        <section class="blog-hero">
+            <div class="hero-content">
+                <h1 class="titulo-centralizado">Nosso Blog</h1>
+                <p>
+                    <h3>Fique por dentro das novidades, dicas e tendências do mundo dos hambúrgueres artesanais.</p>
+            </h3></div>
+        </section>
+
+        <section class="blog-controles">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Pesquisar artigos..." class="search-input"
+                    aria-label="Pesquisar artigos" />
+                <button class="search-btn" aria-label="Botão de pesquisa">Buscar</button>
+            </div>
+            <div class="filtros-blog" role="group" aria-label="Filtros de categorias do blog">
+                <button class="filtro-blog ativo" data-categoria="todas">Todas</button>
+                <button class="filtro-blog" data-categoria="receitas">Receitas</button>
+                <button class="filtro-blog" data-categoria="curiosidades">Curiosidades</button>
+                <button class="filtro-blog" data-categoria="eventos">Eventos</button>
+            </div>
+        </section>
+
+        <section class="artigos-lista" role="list">
+            <article class="artigo-item receitas" role="listitem" tabindex="0"
+                aria-label="Artigo Receita: Hambúrguer artesanal clássico">
+                <img src="imagens/artigo1.jpg" alt="Hambúrguer artesanal clássico" class="artigo-img" />
+                <div class="artigo-conteudo">
+                    <h2>Hambúrguer artesanal clássico: a receita perfeita</h2>
+                    <p>Aprenda a preparar o hambúrguer artesanal perfeito com carne selecionada e segredos da nossa
+                        casa.</p>
+                    <a href="#" class="btn-ler-mais" aria-label="Ler mais sobre hambúrguer artesanal clássico">Ler
+                        Mais</a>
+                </div>
+            </article>
+
+            <article class="artigo-item curiosidades" role="listitem" tabindex="0"
+                aria-label="Artigo Curiosidades: Origem do hambúrguer">
+                <img src="imagens/artigo2.jpg" alt="História do hambúrguer" class="artigo-img" />
+                <div class="artigo-conteudo">
+                    <h2>Curiosidades: a história por trás do hambúrguer</h2>
+                    <p>Descubra as origens do hambúrguer e como ele conquistou o mundo com seu sabor icônico.</p>
+                    <a href="#" class="btn-ler-mais" aria-label="Ler mais sobre a história do hambúrguer">Ler Mais</a>
+                </div>
+            </article>
+
+            <article class="artigo-item eventos" role="listitem" tabindex="0"
+                aria-label="Artigo Evento: Festival de hambúrgueres 2025">
+                <img src="imagens/artigo3.jpg" alt="Festival de hambúrgueres 2025" class="artigo-img" />
+                <div class="artigo-conteudo">
+                    <h2>Festival de hambúrgueres 2025: o que esperar</h2>
+                    <p>Prepare-se para o maior evento de hambúrguer artesanal com chefs renomados e muitas novidades.
+                    </p>
+                    <a href="#" class="btn-ler-mais" aria-label="Ler mais sobre festival de hambúrgueres 2025">Ler
+                        Mais</a>
+                </div>
+            </article>
+        </section>
+
+        <nav class="paginacao" aria-label="Navegação da paginação do blog">
+            <button class="pagina-btn" aria-label="Página anterior">&lt;</button>
+            <button class="pagina-btn ativo" aria-current="page" aria-label="Página 1">1</button>
+            <button class="pagina-btn" aria-label="Página 2">2</button>
+            <button class="pagina-btn" aria-label="Página 3">3</button>
+            <button class="pagina-btn" aria-label="Próxima página">&gt;</button>
+        </nav>
+
+        <section class="newsletter">
+            <h2 class="titulo-centralizado">Assine nossa Newsletter</h2>
+            <p>Receba as melhores ofertas e novidades direto no seu email.</p>
+            <form action="#" method="post" aria-label="Formulário para inscrição na newsletter">
+                <input type="email" placeholder="Seu melhor email" required aria-required="true" />
+                <button type="submit" class="btn-enviar" aria-label="Enviar inscrição da newsletter">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p class="copyright">&copy; Copyright [AllanTec] - 2025</p>
+    </footer>
+
+    <script src="dark_mode.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const buttons = document.querySelectorAll('.filtro-blog');
+            const artigos = document.querySelectorAll('.artigo-item');
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    buttons.forEach(btn => btn.classList.remove('ativo'));
+                    button.classList.add('ativo');
+                    const categoria = button.getAttribute('data-categoria');
+                    artigos.forEach(artigo => {
+                        if (categoria === 'todas' || artigo.classList.contains(categoria)) {
+                            artigo.style.display = 'block';
+                        } else {
+                            artigo.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            const searchInput = document.getElementById('searchInput');
+            const searchBtn = document.querySelector('.search-btn');
+            searchBtn.addEventListener('click', () => {
+                const termo = searchInput.value.toLowerCase();
+                artigos.forEach(artigo => {
+                    const titulo = artigo.querySelector('h2').textContent.toLowerCase();
+                    artigo.style.display = titulo.includes(termo) ? 'block' : 'none';
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

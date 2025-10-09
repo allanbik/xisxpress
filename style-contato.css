@@ -6,36 +6,54 @@ body {
 }
 
 header {
-    background: #fb3b0b;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-header .caixa img {
-    width: 110px;
-    border-radius: 16px;
-}
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    margin: 0;
-}
-nav a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    padding: 6px 14px;
-    border-radius: 10px;
-    background: #ff8800;
-    transition: background 0.3s;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #ff7000;
+  padding: 25px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(255,136,0,0.5);
 }
 
-nav a.active,
-nav a:hover {
-    background: #ffe0b2;
-    color: #fb3b0b;
+.titulo-principal {
+  font-size: 3em;
+  color: #fff;
+  text-shadow: 2px 3px 10px #d04000;
+  margin: 0 20px 10px 0;
+  font-weight: 900;
+}
+
+nav ul {
+  display: flex;
+  gap: 35px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1em;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+nav a.active, nav a:hover {
+  background-color: #ffe0b2;
+  color: #cc5500;
+  box-shadow: 0 0 8px #cc5500;
+}
+
+#banner {
+  width: 100%;
+  max-width: 200px;
+  margin-top: 20px;
+  border-radius: 25px;
+  box-shadow: 0 4px 20px rgba(255, 136, 0, 0.4);
 }
 
 main {
@@ -100,4 +118,41 @@ footer img {
 }
 .copyright {
     margin-top: 8px;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 12px;
+    }
+    ul.produtos {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+       
+    }
+    ul.produtos li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 95%;
+        max-width: 60%;
+        padding: 10%;
+    }
+    ul.produtos li h3 {
+        font-size: 1.1em;
+    }
+    ul.produtos li img {
+        max-width: 100%;
+        height: auto;
+    }
+    .titulo-principal-produtos {
+        font-size: 1.5em;
+    }
 }

@@ -2,57 +2,58 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Produtos - X-XPRESS</title>
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="style-produtos.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produtos - X-XPRESS</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="dark_mode.css">
+  <link rel="stylesheet" href="style-produtos.css">
+  <link rel="icon" href="imagens/X-XPRESS.png">
 </head>
 
 <body>
-    <header>
-        <div class="caixa">
-            <h1>
-                <img src="imagens/X-XPRESS.png" alt="Logo X-XPRESS" />
-            </h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="produtos.html" class="active">Produtos</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <h2 class="titulo-principal-produtos">Nossos Produtos</h2>
-        <ul class="produtos">
-            <li>
-                <h3>X-PROJETO</h3>
-                <img src="imagens/X-PROJETO.png" alt="X-PROJETO" />
-                <p class="produto-descricao">Sanduíche especial com hambúrguer, queijo, alface, tomate e molho especial.
-                </p>
-                <p class="produto-preco">R$ 18,00</p>
-            </li>
-            <li>
-                <h3>X-TUDO</h3>
-                <img src="imagens/X-TUDO.png" alt="X-TUDO" />
-                <p class="produto-descricao">Sanduíche completo com carne, ovo, queijo, bacon e muito sabor.</p>
-                <p class="produto-preco">R$ 22,00</p>
-            </li>
-            <li>
-                <h3>X-OVO</h3>
-                <img src="imagens/X-OVO.png" alt="X-OVO" />
-                <p class="produto-descricao">Sanduíche simples e delicioso com ovo, queijo e alface fresquinho.</p>
-                <p class="produto-preco">R$ 14,00</p>
-            </li>
-        </ul>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 X-XPRESS. Todos os direitos reservados.</p>
-    </footer>
+  <header>
+    <h1 class="titulo-principal">X-XPRESS</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="produtos.html" class="active">Produtos</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="faq-section.html">FAQ</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+    <img id="banner" src="imagens/X-XPRESS.png" alt="Banner oficial da X-XPRESS" />
+    <button class="dark-mode-toggle">Dark Mode</button>
+  </header>
+  <main>
+    <h2 class="titulo-principal-produtos">Nossas Delícias</h2>
+    <ul class="produtos">
+      <li>
+        <h3>X-PROJETO</h3>
+        <img src="imagens/X-PROJETO.png" alt="X-PROJETO">
+        <p class="produto-descricao">Sanduíche especial com hambúrguer, queijo, alface, tomate e molho especial.</p>
+        <p class="produto-preco">R$ 18,00</p>
+      </li>
+      <li>
+        <h3>X-TUDO</h3>
+        <img src="imagens/X-TUDO.png" alt="X-TUDO">
+        <p class="produto-descricao">Sanduíche completo com carne, ovo, queijo, bacon e muito sabor.</p>
+        <p class="produto-preco">R$ 22,00</p>
+      </li>
+      <li>
+        <h3>X-OVO</h3>
+        <img src="imagens/X-OVO.png" alt="X-OVO">
+        <p class="produto-descricao">Sanduíche simples e delicioso com ovo, queijo e alface fresquinho.</p>
+        <p class="produto-preco">R$ 14,00</p>
+      </li>
+    </ul>
+  </main>
+  <footer>
+    <p class="copyright">&copy; Copyright [AllanTec] - 2025</p>
+  </footer>
+  <script src="dark_mode.js"></script>
 </body>
 
 </html>

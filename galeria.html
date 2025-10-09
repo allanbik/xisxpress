@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contato - X-XPRESS</title>
+    <link rel="stylesheet" href="dark_mode.css">
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="galeria.css" />
+</head>
+
+<body>
+    <header>
+        <h1 class="titulo-principal">X-XPRESS</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="faq-section.html">FAQ</a></li>
+                <li><a href="galeria.html" class="active">Galeria</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+        <img id="banner" src="imagens/X-XPRESS.png" alt="Banner oficial da X-XPRESS" />
+        <button class="dark-mode-toggle">Dark Mode</button>
+    </header>
+    <main>
+        <h2 class="titulo-principal-produtos">Nossa Galeria</h2>
+
+        <!-- Filtros da Galeria -->
+        <div class=".filtros-galeria">
+            <button class="filtro-btn ativo" data-filtro="todos">Todos</button>
+            <button class="filtro-btn" data-filtro="categoria1">Super Burgers</button>
+            <button class="filtro-btn" data-filtro="categoria2">Burger Doce</button>
+            <button class="filtro-btn" data-filtro="categoria3">Sobremesa</button>
+        </div>
+
+        <!-- Grid de Imagens -->
+        <div class="galeria-grid">
+            <!-- Item 1 -->
+            <div class="galeria-item" data-categoria="categoria1">
+                <img class="galeria-img" src="imagens/X-OVO.png" alt="Quando pensar em proteina pense no X-OVO">
+                <div class="galeria-overlay">
+                    <h3>X-OVO</h3>
+                    <p>O X-Ovo da X-XPRESS é aquele clássico que nunca sai de moda. Preparado com pão macio, </p>
+                    <p>hambúrguer suculento, queijo derretido e o toque especial de um ovo fresquinho, é a escolha</p>
+                    <p> perfeita para matar a fome com muito sabor. Simples, completo e irresistível!</p>
+                    <button class="btn-ver-mais">Ver Detalhes</button>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="galeria-item" data-categoria="categoria2">
+                <img class="galeria-img" src="imagens/X-OVOPASCOA.png" alt="X-Ovo de Pascoa Special da X-XPRESS">
+                <div class="galeria-overlay">
+                    <h3>X-Ovo de Pascoa Special da X-XPRESS</h3>
+                    <p>O X-Ovo de Pascoa Special da X-XPRESS vai além do tradicional: combina recheios irresistíveis,
+                        casca </p>
+                    <p>crocante e um design diferenciado que transforma cada mordida em uma experiência única. </p>
+                    <p>Mais que chocolate, é um presente cheio de sabor e criatividade.</p>
+                    <button class="btn-ver-mais">Ver Detalhes</button>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="galeria-item" data-categoria="categoria1">
+                <img class="galeria-img" src="imagens/galeria3.jpg"
+                    alt="X-Burger Supreme com dupla camada de carne e queijo">
+                <div class="galeria-overlay">
+                    <h3>X-Burger Supreme</h3>
+                    <p>O X-Burger Supreme da X-XPRESS eleva o hambúrguer clássico a outro nível: duas camadas de carne
+                        suculenta,</p>
+                    <p>queijo cheddar derretido, bacon crocante e molho especial da casa, tudo em um pão artesanal
+                        macio. </p>
+                    <p>Mais que um lanche, uma experiência de sabor intensa e inesquecível.</p>
+                    <button class="btn-ver-mais">Ver Detalhes</button>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="galeria-item" data-categoria="categoria3">
+                <img class="galeria-img" src="imagens/galeria4.jpg"
+                    alt="Taça de sobremesa exclusiva da X-XPRESS com camadas de creme, frutas e chocolate">
+                <div class="galeria-overlay">
+                    <h3>Taça Premium X-XPRESS</h3>
+                    <p>A Taça Premium X-XPRESS combina o frescor das frutas com o sabor marcante do chocolate artesanal,
+                    </p>
+                    <p>em camadas cremosas que conquistam a cada colherada. Uma sobremesa sofisticada, feita para
+                        compartilhar</p>
+                    <p>momentos especiais com muito sabor e qualidade.</p>
+                    <button class="btn-ver-mais">Ver Detalhes</button>
+                </div>
+            </div>
+
+
+            <!-- Item 5 -->
+            <div class="galeria-item" data-categoria="categoria3">
+                <img class="galeria-img" src="imagens/galeria5.jpg"
+                    alt="Milkshake gourmet de cookies com chantilly e calda de chocolate">
+                <div class="galeria-overlay">
+                    <h3>Milkshake Cookies & Cream</h3>
+                    <p>O Milkshake Cookies & Cream da X-XPRESS é cremoso, indulgente e cheio de pedaços crocantes de
+                        cookies,</p>
+                    <p>finalizado com chantilly e calda de chocolate. Uma bebida irresistível que mistura refrescância e
+                    </p>
+                    <p>a doçura perfeita para qualquer hora do dia.</p>
+                    <button class="btn-ver-mais">Ver Detalhes</button>
+                </div>
+            </div>
+
+
+            <!-- Item 6 -->
+            <div class="galeria-item" data-categoria="categoria3">
+                <img class="galeria-img" src="imagens/galeria6.jpg"
+                    alt="Sobremesa de açaí power da X-XPRESS com granola, banana e leite condensado">
+                <div class="galeria-overlay">
+                    <h3>Açaí Power Bowl</h3>
+                    <p>O Açaí Power Bowl da X-XPRESS entrega energia e sabor em cada colherada: açaí cremoso batido na
+                        medida,</p>
+                    <p>servido com frutas frescas, granola crocante e o toque adocicado do leite condensado. </p>
+                    <p>Uma opção refrescante, nutritiva e perfeita para qualquer momento do dia.</p>
+                    <button class="btn-ver-mais">Ver Detalhes</button>
+                </div>
+            </div>
+
+
+            <!-- Modal/Lightbox -->
+            <div class="modal-galeria" id="modalGaleria">
+                <span class="fechar-modal">&times;</span>
+                <img class="modal-conteudo" id="modalImagem">
+                <div class="modal-caption" id="modalCaption"></div>
+                <div class="modal-navegacao">
+                    <button class="nav-btn prev">❮ Anterior</button>
+                    <button class="nav-btn next">Próximo ❯</button>
+                </div>
+            </div>
+
+            <!-- Seção de Estatísticas -->
+            <section class="estatisticas">
+                <h3>Nossos Números</h3>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-numero" data-target="150">0</span>
+                        <span class="stat-label">Projetos Realizados</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-numero" data-target="98">0</span>
+                        <span class="stat-label">Clientes Satisfeitos</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-numero" data-target="5">0</span>
+                        <span class="stat-label">Anos de Experiência</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-numero" data-target="24">0</span>
+                        <span class="stat-label">Prêmios Recebidos</span>
+                    </div>
+                </div>
+            </section>
+    </main>
+
+    <footer>
+        <img src="imagens/X-XPRESS2.png" alt="Logo X-XPRESS" class="footer-logo">
+        <p class="copyright">&copy; Copyright [AllanTec] - 2025</p>
+    </footer>
+
+    <!-- JavaScript da Galeria -->
+    <script>
+        // Filtro da Galerias
+        const filtros = document.querySelectorAll('.filtro-btn');
+        const itens = document.querySelectorAll('.galeria-item');
+
+        filtros.forEach(btn => {
+            btn.addEventListener('click', function () {
+                // Remove classe ativo de todos
+                filtros.forEach(f => f.classList.remove('ativo'));
+                // Adiciona classe ativo no clicado
+                this.classList.add('ativo');
+
+                const filtro = this.getAttribute('data-filtro');
+
+                itens.forEach(item => {
+                    if (filtro === 'todos' || item.getAttribute('data-categoria') === filtro) {
+                        item.style.display = 'block';
+                        item.style.animation = 'fadeIn 0.5s';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Modal/Lightbox
+        const modal = document.getElementById('modalGaleria');
+        const modalImg = document.getElementById('modalImagem');
+        const modalCaption = document.getElementById('modalCaption');
+        const verMaisBtns = document.querySelectorAll('.btn-ver-mais');
+        const fecharModal = document.querySelector('.fechar-modal');
+
+        verMaisBtns.forEach(btn => {
+            btn.addEventListener('click', function (e) {
+                e.stopPropagation();
+                const item = this.closest('.galeria-item');
+                const img = item.querySelector('img');
+                const titulo = item.querySelector('h3').textContent;
+                const descricao = item.querySelector('p').textContent;
+
+                modal.style.display = 'block';
+                modalImg.src = img.src;
+                modalCaption.innerHTML = `<h3>${titulo}</h3><p>${descricao}</p>`;
+            });
+        });
+
+        fecharModal.onclick = function () {
+            modal.style.display = 'none';
+        }
+
+        modal.onclick = function (e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        // Contador animado
+        const contadores = document.querySelectorAll('.stat-numero');
+        const velocidade = 200;
+
+        function iniciarContador(contador) {
+            const alvo = +contador.getAttribute('data-target');
+            const incremento = alvo / velocidade;
+
+            function atualizarContador() {
+                const atual = +contador.innerText;
+
+                if (atual < alvo) {
+                    contador.innerText = Math.ceil(atual + incremento);
+                    setTimeout(atualizarContador, 1);
+                } else {
+                    contador.innerText = alvo;
+                }
+            }
+
+            atualizarContador();
+        }
+
+        // Observador para iniciar animação quando visível
+        const observador = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const contador = entry.target;
+                    if (contador.innerText === '0') {
+                        iniciarContador(contador);
+                    }
+                }
+            });
+        });
+
+        contadores.forEach(contador => {
+            observador.observe(contador);
+        });
+
+        // Animação de fade in
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+    <script src="dark_mode.js"></script>
+</body>
+
+</html>

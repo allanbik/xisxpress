@@ -30,24 +30,24 @@ class DarkModeToggle {
         this.toggleButton.setAttribute('title', 'Alternar tema');
 
         // Ícone do sol (modo claro)
-        const sunIcon = 
+        const sunIcon = `
             <svg class="toggle-icon sun-icon" viewBox="0 0 24 24" fill="currentColor">
                 <circle cx="12" cy="12" r="5"/>
                 <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
             </svg>
-        ;
+        `;
 
         // Ícone da lua (modo escuro)
-        const moonIcon = 
+        const moonIcon = `
             <svg class="toggle-icon moon-icon" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
             </svg>
-        ;
+        `;
 
         // Texto do toggle (aparece apenas no hover em desktop)
-        const toggleText = 
+        const toggleText = `
             <span class="toggle-text">Alternar tema</span>
-        ;
+        `;
 
         this.toggleButton.innerHTML = sunIcon + moonIcon + toggleText;
 
@@ -112,7 +112,7 @@ class DarkModeToggle {
         this.dispatchThemeChange(theme);
         
         // Log para debug (remover em produção)
-        console.log(Tema alterado para: ${theme});
+        console.log(`Tema alterado para: ${theme}`);
     }
 
     updateIcons(theme) {
@@ -128,8 +128,8 @@ class DarkModeToggle {
     updateButtonText(theme) {
         const text = theme === 'dark' ? 'Modo Claro' : 'Modo Escuro';
         this.toggleText.textContent = text;
-        this.toggleButton.setAttribute('aria-label', Alternar para ${text.toLowerCase()});
-        this.toggleButton.setAttribute('title', Alternar para ${text.toLowerCase()});
+        this.toggleButton.setAttribute('aria-label', `Alternar para ${text.toLowerCase()}`);
+        this.toggleButton.setAttribute('title', `Alternar para ${text.toLowerCase()}`);
     }
 
     getCurrentTheme() {
@@ -142,7 +142,7 @@ class DarkModeToggle {
             // localStorage.setItem('theme-preference', theme);
             
             // Como alternativa, usar sessionStorage ou cookie
-            document.cookie = theme=${theme}; path=/; max-age=31536000; // 1 ano
+            document.cookie = `theme=${theme}; path=/; max-age=31536000`; // 1 ano
         } catch (error) {
             console.warn('Não foi possível salvar a preferência de tema:', error);
         }
@@ -171,8 +171,8 @@ class DarkModeToggle {
     }
 
     getCookieValue(name) {
-        const value = ; ${document.cookie};
-        const parts = value.split(; ${name}=);
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
         if (parts.length === 2) {
             return parts.pop().split(';').shift();
         }

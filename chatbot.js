@@ -49,9 +49,9 @@ class ChatBot {
                 'horário', 'horarios', 'funcionamento', 'aberto', 'fechado', 'quando'
             ],
             resposta_horarios: `📅 <strong>Nossos horários:</strong><br>
-                Segunda à Sexta: 8h às 18h<br>
-                Sábados: 8h às 14h<br>
-                Domingos: Fechado<br><br>
+                Terça à Sexta: 16h às 23h<br>
+                Sábados e Domingo: 11h às 23:30h<br>
+                Segunda: Fechado<br><br>
                 Precisa de mais informações?`,
 
             // Serviços - PERSONALIZE

@@ -10,6 +10,7 @@
 
 /* Botão Flutuante do Chat */
 .chat-button {
+    position: relative;
     width: 60px;
     height: 60px;
     background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
@@ -19,10 +20,7 @@
     justify-content: center;
     cursor: pointer;
     box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
-    transition: all 0.3s ease;
-    position: relative;
-    border: none;
-    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
 .chat-button:hover {
@@ -38,7 +36,8 @@
     background: linear-gradient(135deg, #ff4757 0%, #c44569 100%);
 }
 
-.chat-icon, .close-icon {
+.chat-icon,
+.close-icon {
     width: 24px;
     height: 24px;
     color: white;
@@ -69,8 +68,15 @@
 }
 
 @keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.1); }
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
 }
 
 /* Janela do Chat */
@@ -82,7 +88,7 @@
     height: 500px;
     background: var(--bg-primary, white);
     border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
     display: none;
     flex-direction: column;
     overflow: hidden;
@@ -109,6 +115,7 @@
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -172,8 +179,16 @@
 }
 
 @keyframes blink {
-    0%, 50% { opacity: 1; }
-    51%, 100% { opacity: 0.5; }
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0.5;
+    }
 }
 
 .chat-actions {
@@ -181,10 +196,11 @@
     gap: 5px;
 }
 
-.minimize-btn, .close-chat-btn {
+.minimize-btn,
+.close-chat-btn {
     width: 30px;
     height: 30px;
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
     border: none;
     border-radius: 50%;
     color: white;
@@ -197,8 +213,9 @@
     transition: all 0.2s ease;
 }
 
-.minimize-btn:hover, .close-chat-btn:hover {
-    background: rgba(255,255,255,0.3);
+.minimize-btn:hover,
+.close-chat-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
 }
 
 /* Área de Mensagens */
@@ -242,6 +259,7 @@
         opacity: 0;
         transform: translateY(10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -281,7 +299,7 @@
     background: white;
     border-radius: 18px 18px 18px 4px;
     padding: 12px 16px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .user-message .message-content {
@@ -305,7 +323,7 @@
 }
 
 .user-message .message-time {
-    color: rgba(255,255,255,0.8);
+    color: rgba(255, 255, 255, 0.8);
 }
 
 /* Sugestões Rápidas */
@@ -431,8 +449,16 @@
 }
 
 @keyframes typing {
-    0%, 60%, 100% { transform: translateY(0); }
-    30% { transform: translateY(-10px); }
+
+    0%,
+    60%,
+    100% {
+        transform: translateY(0);
+    }
+
+    30% {
+        transform: translateY(-10px);
+    }
 }
 
 /* Botão WhatsApp */
@@ -469,7 +495,7 @@
     background: var(--bg-primary, white);
     border-radius: 10px;
     padding: 12px 16px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     border: 1px solid var(--border-color, #e1e5e9);
     min-width: 200px;
     animation: notificationSlide 0.3s ease;
@@ -480,6 +506,7 @@
         opacity: 0;
         transform: translateX(20px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -523,12 +550,12 @@
         width: calc(100vw - 40px);
         max-width: 350px;
     }
-    
+
     .chat-widget {
         bottom: 15px;
         right: 15px;
     }
-    
+
     .message-content {
         max-width: 85%;
     }
@@ -552,5 +579,7 @@
 }
 
 @keyframes spin {
-    to { transform: rotate(360deg); }
+    to {
+        transform: rotate(360deg);
+    }
 }

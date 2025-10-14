@@ -80,6 +80,13 @@ class ChatBot {
                 'onde', 'endereço', 'localização', 'fica', 'local'
             ],
             resposta_localizacao: `📍 <strong>Nossa localização:</strong><br>
+            <p>
+            📍 <strong>Nosso endereço</strong><br>
+             R. Natal, 2800 - Centro, Cascavel - PR<br>
+             <a href="https://www.google.com/maps?q=R.%20Natal,%202800%20-%20Centro,%20Cascavel%20-%20PR" target="_blank" rel="noopener">
+             Abrir no Google Maps
+             </a>
+             </p>
                 Rua Teste, 123<br>
                 Centro - Sua Cidade/UF<br>
                 CEP: 00000-000<br><br>
@@ -513,3 +520,4 @@ if (typeof module !== 'undefined' && module.exports) {
     module.exports = { ChatBot, openChatBot, closeChatBot };
 
 }
+

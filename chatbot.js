@@ -49,19 +49,21 @@ class ChatBot {
                 'horário', 'horarios', 'funcionamento', 'aberto', 'fechado', 'quando'
             ],
             resposta_horarios: `📅 <strong>Nossos horários:</strong><br>
-                Segunda à Sábado: 8h às 23h<br>
-                Domingos: 11h às 23h <br><br>
+                Segunda à Sexta: 8h às 18h<br>
+                Sábados: 8h às 14h<br>
+                Domingos: Fechado<br><br>
                 Precisa de mais informações?`,
 
             // Serviços - PERSONALIZE
             servicos: [
                 'serviço', 'serviços', 'produto', 'produtos', 'oferece', 'fazem'
             ],
-            resposta_servicos: `💼 <strong>Nossos principais serviços:</strong><br>
-                • [SERVIÇO 1 - Ex: Consultas especializadas]<br>
-                • [SERVIÇO 2 - Ex: Atendimento personalizado]<br>
-                • [SERVIÇO 3 - Ex: Produtos premium]<br><br>
-                Gostaria de saber mais sobre algum específico?`,
+            resposta_servicos: 💼 <strong>Bora matar a fome?</strong><br>
+            • Lanches artesanais suculentos, do jeitinho que você gosta 🍔<br>
+            • Combos com batata crocante e refri geladinho 🥤<br>
+            • Delivery rapidinho pra chegar quentinho na sua porta 🚀<br><br>
+            <strong>Quer ver o cardápio agora?</strong> Pede o link por aqui que eu já te mando! 😋🔥
+
 
             // Contato - PERSONALIZE
             contato: [
@@ -78,6 +80,13 @@ class ChatBot {
                 'onde', 'endereço', 'localização', 'fica', 'local'
             ],
             resposta_localizacao: `📍 <strong>Nossa localização:</strong><br>
+            <p>
+            📍 <strong>Nosso endereço</strong><br>
+             R. Natal, 2800 - Centro, Cascavel - PR<br>
+             <a href="https://www.google.com/maps?q=R.%20Natal,%202800%20-%20Centro,%20Cascavel%20-%20PR" target="_blank" rel="noopener">
+             Abrir no Google Maps
+             </a>
+             </p>
                 Rua Teste, 123<br>
                 Centro - Sua Cidade/UF<br>
                 CEP: 00000-000<br><br>
@@ -509,4 +518,6 @@ function addChatBotResponse(keywords, response) {
 // Export para uso em módulos
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = { ChatBot, openChatBot, closeChatBot };
+
 }
+

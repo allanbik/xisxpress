@@ -7,7 +7,6 @@ class ChatBot {
         this.conversationHistory = [];
         this.responses = this.initializeResponses();
         this.userInfo = {};
-        
         this.init();
         this.bindEvents();
         this.showWelcomeNotification();
@@ -70,8 +69,8 @@ class ChatBot {
                 'contato', 'telefone', 'whatsapp', 'email', 'falar'
             ],
             resposta_contato: `📞 <strong>Entre em contato conosco:</strong><br>
-                Telefone: (41) 3333-4444<br>
-                WhatsApp: (41) 99999-8888<br>
+                Telefone: (45) 98801 2638<br>
+                WhatsApp: (45) 98801 2638<br>
                 Email: contato@seunegocio.com<br><br>
                 Prefere falar pelo WhatsApp? Clique no botão abaixo! 👇`,
 
@@ -80,7 +79,7 @@ class ChatBot {
                 'onde', 'endereço', 'localização', 'fica', 'local'
             ],
             resposta_localizacao: `📍 <strong>Nossa localização:</strong><br>
-                Rua Exemplo, 123<br>
+                Rua Teste, 123<br>
                 Centro - Sua Cidade/UF<br>
                 CEP: 00000-000<br><br>
                 Fácil acesso por transporte público!`,

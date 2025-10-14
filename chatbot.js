@@ -49,20 +49,21 @@ class ChatBot {
                 'horário', 'horarios', 'funcionamento', 'aberto', 'fechado', 'quando'
             ],
             resposta_horarios: `📅 <strong>Nossos horários:</strong><br>
-                Segunda à Sexta: 8h às 18h<br>
-                Sábados: 8h às 14h<br>
-                Domingos: Fechado<br><br>
+                Terça à Sexta: 16h às 23h<br>
+                Sábados e Domingo: 11h às 23:30h<br>
+                Segunda: Fechado<br><br>
                 Precisa de mais informações?`,
 
             // Serviços - PERSONALIZE
             servicos: [
                 'serviço', 'serviços', 'produto', 'produtos', 'oferece', 'fazem'
             ],
-            resposta_servicos: `💼 <strong>Nossos principais serviços:</strong><br>
-                • [SERVIÇO 1 - Ex: Consultas especializadas]<br>
-                • [SERVIÇO 2 - Ex: Atendimento personalizado]<br>
-                • [SERVIÇO 3 - Ex: Produtos premium]<br><br>
-                Gostaria de saber mais sobre algum específico?`,
+            resposta_servicos: 💼 <strong>Bora matar a fome?</strong><br>
+            • Lanches artesanais suculentos, do jeitinho que você gosta 🍔<br>
+            • Combos com batata crocante e refri geladinho 🥤<br>
+            • Delivery rapidinho pra chegar quentinho na sua porta 🚀<br><br>
+            <strong>Quer ver o cardápio agora?</strong> Pede o link por aqui que eu já te mando! 😋🔥
+
 
             // Contato - PERSONALIZE
             contato: [
@@ -510,4 +511,5 @@ function addChatBotResponse(keywords, response) {
 // Export para uso em módulos
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = { ChatBot, openChatBot, closeChatBot };
+
 }

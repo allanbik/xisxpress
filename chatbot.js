@@ -49,9 +49,14 @@ class ChatBot {
                 'horário', 'horarios', 'funcionamento', 'aberto', 'fechado', 'quando'
             ],
             resposta_horarios: `📅 <strong>Nossos horários:</strong><br>
+<<<<<<< HEAD
+                Segunda à Sábado: 8h às 23h<br>
+                Domingos: 11h às 23h <br><br>
+=======
                 Terça à Sexta: 16h às 23h<br>
                 Sábados e Domingo: 11h às 23:30h<br>
                 Segunda: Fechado<br><br>
+>>>>>>> 7fdc634ad6a31313a37bdf52d0569eb3e7f6fb13
                 Precisa de mais informações?`,
 
             // Serviços - PERSONALIZE
@@ -99,7 +104,7 @@ class ChatBot {
             resposta_precos: `💰 <strong>Preços e orçamentos:</strong><br>
                 Nossos valores variam conforme o serviço escolhido.<br>
                 Para um orçamento personalizado, entre em contato:<br><br>
-                📱 WhatsApp: (41) 99999-8888<br>
+                📱 WhatsApp: (45) 98801-2638<br>
                 Teremos prazer em atendê-lo!`,
 
             // Agendamento

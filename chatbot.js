@@ -7,6 +7,7 @@ class ChatBot {
         this.conversationHistory = [];
         this.responses = this.initializeResponses();
         this.userInfo = {};
+        
         this.init();
         this.bindEvents();
         this.showWelcomeNotification();
@@ -49,30 +50,29 @@ class ChatBot {
                 'horário', 'horarios', 'funcionamento', 'aberto', 'fechado', 'quando'
             ],
             resposta_horarios: `📅 <strong>Nossos horários:</strong><br>
-                Terça à Sexta: 16h às 23h<br>
-                Sábados e Domingo: 11h às 23:30h<br>
-                Segunda: Fechado<br><br>
+                Segunda à Sexta: 18h às 23h<br>
+                Sábados: 18h às 23:30h<br>
+                Domingos: 18h às 21h<br>
                 Precisa de mais informações?`,
 
             // Serviços - PERSONALIZE
             servicos: [
                 'serviço', 'serviços', 'produto', 'produtos', 'oferece', 'fazem'
             ],
-            resposta_servicos: 💼 <strong>Bora matar a fome?</strong><br>
-            • Lanches artesanais suculentos, do jeitinho que você gosta 🍔<br>
-            • Combos com batata crocante e refri geladinho 🥤<br>
-            • Delivery rapidinho pra chegar quentinho na sua porta 🚀<br><br>
-            <strong>Quer ver o cardápio agora?</strong> Pede o link por aqui que eu já te mando! 😋🔥
-
+            resposta_servicos: `💼 <strong>Nossos principais serviços:</strong><br>
+                • Lanches artesanais preparados na hora<br>
+                • Combos promocionais com batata e refrigerante<br>
+                • Delivery rápido e embalagens seguras<br><br>
+                Gostaria de saber mais sobre algum específico?`,
 
             // Contato - PERSONALIZE
             contato: [
                 'contato', 'telefone', 'whatsapp', 'email', 'falar'
             ],
             resposta_contato: `📞 <strong>Entre em contato conosco:</strong><br>
-                Telefone: (45) 98801 2638<br>
-                WhatsApp: (45) 98801 2638<br>
-                Email: contato@seunegocio.com<br><br>
+                Telefone: (45) 98801-2638<br>
+                WhatsApp: (45) 98801-2638<br>
+                Email: allanbik@gmail.com<br><br>
                 Prefere falar pelo WhatsApp? Clique no botão abaixo! 👇`,
 
             // Localização - PERSONALIZE
@@ -80,16 +80,9 @@ class ChatBot {
                 'onde', 'endereço', 'localização', 'fica', 'local'
             ],
             resposta_localizacao: `📍 <strong>Nossa localização:</strong><br>
-            <p>
-            📍 <strong>Nosso endereço</strong><br>
-             R. Natal, 2800 - Centro, Cascavel - PR<br>
-             <a href="https://www.google.com/maps?q=R.%20Natal,%202800%20-%20Centro,%20Cascavel%20-%20PR" target="_blank" rel="noopener">
-             Abrir no Google Maps
-             </a>
-             </p>
-                Rua Teste, 123<br>
-                Centro - Sua Cidade/UF<br>
-                CEP: 00000-000<br><br>
+                Rua Natal, 123<br>
+                Centro - Cascavel/PR<br>
+                CEP: 85000-000<br><br>
                 Fácil acesso por transporte público!`,
 
             // Preços
@@ -106,10 +99,10 @@ class ChatBot {
             agendamento: [
                 'agendar', 'marcar', 'consulta', 'horario', 'disponível'
             ],
-            resposta_agendamento: `📅 <strong>Agendamentos:</strong><br>
+            resposta_agendamento: `📅 <strong>Pedidos:</strong><br>
                 Para marcar seu horário:<br>
-                • Ligue: (41) 3333-4444<br>
-                • WhatsApp: (41) 99999-8888<br>
+                • Ligue: (45) 98801-2638<br>
+                • WhatsApp: (45) 98801-2638<br>
                 • Ou visite nossa página de contato<br><br>
                 Temos horários flexíveis para melhor atendê-lo!`,
 
@@ -121,7 +114,7 @@ class ChatBot {
             ],
 
             despedida: [
-                'tchau', 'bye', 'obrigado', 'obrigada', 'valeu', 'até logo'
+                'tchau', 'bye', 'obrigado', 'ate', 'blza','obrigada', 'valeu', 'até logo'
             ],
             resposta_despedida: [
                 'Foi um prazer ajudar! Até logo! 👋',
@@ -274,7 +267,7 @@ class ChatBot {
             minute: '2-digit' 
         });
         
-        const avatar = sender === 'user' ? 'U' : '<img src="imagens/logo.png" alt="Bot">';
+        const avatar = sender === 'user' ? 'U' : '<img src="imagens/logo_boot.png" alt="Bot">';
         
         messageDiv.innerHTML = `
             <div class="message-avatar">
@@ -432,7 +425,7 @@ class ChatBot {
 
     redirectToWhatsApp() {
         // PERSONALIZE o número do WhatsApp aqui
-        const phoneNumber = '5541999998888'; // Formato: código país + DDD + número
+        const phoneNumber = '5545988012638'; // Formato: código país + DDD + número
         const message = this.generateWhatsAppMessage();
         const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
         
@@ -518,6 +511,4 @@ function addChatBotResponse(keywords, response) {
 // Export para uso em módulos
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = { ChatBot, openChatBot, closeChatBot };
-
 }
-

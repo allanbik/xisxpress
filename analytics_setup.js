@@ -1,5 +1,4 @@
 /* === GOOGLE ANALYTICS 4 SETUP === */
-
 class AnalyticsManager {
     constructor() {
         this.GA_MEASUREMENT_ID = 'G-6VWLRNTNTQ'; // SUBSTITUA pelo seu ID do GA4

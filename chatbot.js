@@ -1,5 +1,4 @@
 /* === CHATBOT JAVASCRIPT === */
-
 class ChatBot {
     constructor() {
         this.isOpen = false;

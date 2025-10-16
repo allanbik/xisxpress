@@ -434,3 +434,41 @@ footer .copyright {
     color: #888;
     margin: 0;
 }
+
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 12px;
+    }
+    ul.produtos {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+       
+    }
+    ul.produtos li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 95%;
+        max-width: 60%;
+        padding: 10%;
+    }
+    ul.produtos li h3 {
+        font-size: 1.1em;
+    }
+    ul.produtos li img {
+        max-width: 100%;
+        height: auto;
+    }
+    .titulo-principal-produtos {
+        font-size: 1.5em;
+    }
+}

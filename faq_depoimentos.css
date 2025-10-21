@@ -1,4 +1,4 @@
-body {
+/*body {
     font-family: 'Segoe UI', Arial, sans-serif;
     background: #ffeede;
     margin: 0;
@@ -22,7 +22,7 @@ header {
   text-shadow: 2px 3px 10px #d04000;
   margin: 0 20px 10px 0;
   font-weight: 900;
-}
+}*/
 
 nav ul {
   display: flex;
@@ -47,14 +47,14 @@ nav a.active, nav a:hover {
   color: #cc5500;
   box-shadow: 0 0 8px #cc5500;
 }
-
+/*
 #banner {
   width: 100%;
   max-width: 200px;
   margin-top: 20px;
   border-radius: 25px;
   box-shadow: 0 4px 20px rgba(255, 136, 0, 0.4);
-}
+}*/
 
 .faq-section {
     background: #f8f9fa;

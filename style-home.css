@@ -9,6 +9,14 @@ header {
   box-shadow: 0 4px 10px rgba(255,136,0,0.5);
 }
 
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #ffeede;
+    margin: 0;
+    padding: 0;
+}
+
+
 .titulo-principal {
   font-size: 3em;
   color: #fff;
@@ -29,7 +37,7 @@ nav a {
   text-decoration: none;
   color: #fff;
   font-weight: 700;
-  font-size: 1.1em;
+  font-size: 1.0em;
   padding: 8px 16px;
   border-radius: 20px;
   transition: background-color 0.4s ease, color 0.4s ease;
@@ -43,10 +51,84 @@ nav a.active, nav a:hover {
 
 #banner {
   width: 100%;
-  max-width: 200px;
-  margin-top: 20px;
+  max-width: 100px;
+  margin-top: 10px;
   border-radius: 25px;
   box-shadow: 0 4px 20px rgba(255, 136, 0, 0.4);
+}
+
+
+.titulo-principal-produtos {
+    text-align: center;
+    color: #fb3b0b;
+    font-size: 2.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+.titulo-principal-produtos::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #ff7b00;
+    margin: 12px auto 0;
+    border-radius: 2px;
+}
+
+ul.produtos {
+    display: flex;
+    gap: 38px;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+}
+
+ul.produtos li {
+    background: #fff4dd;
+    border: 1px solid #ff8800;
+    border-radius: 16px;
+    padding: 20px;
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+ul.produtos li h3 {
+    color: #fb3b0b;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+ul.produtos li img {
+    display: block;
+    width: 100%;
+    max-width: 220px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid #ff8800;
+    margin-bottom: 12px;
+}
+
+.produto-descricao {
+    font-size: 1.12em;
+    margin: 12px 0;
+    color: #222;
+}
+.produto-preco {
+    color: #fb3b0b;
+    font-size: 1.23em;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .principal {

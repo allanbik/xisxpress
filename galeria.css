@@ -1,5 +1,5 @@
 header {
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: sans-serif;
   background-color: #ff7000;
   padding: 25px 20px;
   display: flex;
@@ -24,19 +24,6 @@ body {
   font-weight: 900;
 }
 
-.titulo-principal-produtos {
-    text-align: center;
-    color: #fb3b0b;
-    font-size: 2.5em;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 40px;
-    letter-spacing: 2px;
-    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
-    font-family: 'Poppins', sans-serif;
-    position: relative;
-}
-
 nav ul {
   display: flex;
   gap: 35px;
@@ -49,7 +36,7 @@ nav a {
   text-decoration: none;
   color: #fff;
   font-weight: 700;
-  font-size: 1.1em;
+  font-size: 1.0em;
   padding: 8px 16px;
   border-radius: 20px;
   transition: background-color 0.4s ease, color 0.4s ease;
@@ -67,6 +54,19 @@ nav a.active, nav a:hover {
   margin-top: 10px;
   border-radius: 25px;
   box-shadow: 0 4px 20px rgba(255, 136, 0, 0.4);
+}
+
+.titulo-principal-produtos {
+    text-align: center;
+    color: #fb3b0b;
+    font-size: 2.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+    font-family: 'Poppins', sans-serif;
+    position: relative;
 }
 
 .filtros-galeria {

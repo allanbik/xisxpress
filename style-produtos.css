@@ -5,6 +5,16 @@ body {
     padding: 0;
 }
 
+header {
+  font-family: sans-serif;
+  background-color: #ff7000;
+  padding: 25px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(255,136,0,0.5);
+}
 /* Cards padrão claro */
 ul.produtos li {
   background: #fff4dd;
@@ -58,18 +68,6 @@ header {
   color: var(--secondary-color);
 }
 
-
-header {
-  font-family: sans-serif;
-  background-color: #ff7000;
-  padding: 25px 20px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: 0 4px 10px rgba(255,136,0,0.5);
-}
-
 .titulo-principal {
   font-size: 3em;
   color: #fff;
@@ -90,7 +88,7 @@ nav a {
   text-decoration: none;
   color: #fff;
   font-weight: 700;
-  font-size: 1.1em;
+  font-size: 1.0em;
   padding: 8px 16px;
   border-radius: 20px;
   transition: background-color 0.4s ease, color 0.4s ease;

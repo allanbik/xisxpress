@@ -13,9 +13,9 @@ const unidades = [
         nome: 'Unidade Centro',
         lat: -24.946574679793617,  // Latitude - ALTERE para sua localização real
         lng: -53.48328994623721,  // Longitude - ALTERE para sua localização real
-        endereco: 'Rua Exemplo, 123<br>Centro - Curitiba/PR',
-        telefone: '+5541999998888',
-        horario: 'Seg-Sex: 8h-18h | Sáb: 8h-14h',
+        endereco: 'Rua Natal, 2280<br>Centro - Cascavel/PR',
+        telefone: '+5545988012638',
+        horario: 'Atendemos de segunda a sexta das 8h às 18h e aos sábados das 8h às 14h',
         descricao: 'Nossa unidade principal no centro da cidade.'
     }
     // Adicione mais unidades conforme necessário

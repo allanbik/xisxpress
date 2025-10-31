@@ -1,6 +1,10 @@
 /* === ESTILOS DA CALCULADORA INTERATIVA === */
 
 /* Seletor de Tipo de Calculadora */
+* {
+  box-sizing: border-box;
+}
+
 .tipo-calculadora-selector {
     display: flex;
     justify-content: center;

@@ -583,6 +583,83 @@ nav a:hover {
 }
 
 /* Responsividade */
+/* Responsividade */
+@media (max-width: 968px) {
+    .calendario-horario-container {
+        grid-template-columns: 1fr;
+    }
+
+    .horarios-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .progress-bar {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .progress-bar::before {
+        display: none;
+    }
+
+    .servicos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .resumo-agendamento {
+        grid-template-columns: 1fr;
+    }
+
+    .etapa-navegacao {
+        flex-direction: column;
+    }
+
+    .btn-voltar,
+    .btn-proximo,
+    .btn-confirmar {
+        width: 100%;
+    }
+
+    .horarios-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .modal-content {
+        padding: 30px 20px;
+        margin: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .step-label {
+        font-size: 0.75em;
+    }
+
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1em;
+    }
+
+    .calendario-dias-semana div {
+        font-size: 0.8em;
+        padding: 8px 0;
+    }
+
+    .dia {
+        font-size: 0.9em;
+    }
+
+    .ajuda-grid {
+        grid-template-columns: 1fr;
+    }
+
 @media (max-width: 968px) {
     .calculadora-container {
         grid-template-columns: 1fr;

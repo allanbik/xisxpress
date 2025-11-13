@@ -466,6 +466,26 @@ body.dark-mode .newsletter .btn-enviar:hover {
   color: #754100;
 }
 
+/* Conteúdo expandido (inicialmente oculto) */
+.artigo-expandido {
+    display: none;
+    margin-top: 15px;
+    padding: 15px 20px;
+    background: #fff8f0;
+    border-left: 4px solid #ff7000;
+    border-radius: 12px;
+    color: #4a4a4a;
+    line-height: 1.6em;
+}
+
+/* Botão quando aberto */
+.btn-ler-mais.aberto {
+    background: #fff;
+    color: #ff7000;
+    border: 2px solid #ff7000;
+}
+
+
 /* Responsividade */
 @media(max-width: 768px) {
   nav ul {

@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Blog - X-XPRESS</title>
     <P></P>
@@ -107,9 +107,9 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="produtos.html">Produtos</a></li>
-                <li><a href="agendamento.html">Agendamento</a></li>
+                <li><a href="agendamento.html">Pedido</a></li>
                 <li><a href="calculadora.html">Calculadora</a></li>
-                <li><a href="galeria.html" >Galeria</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
                 <li><a href="blog.html" class="active">Blog</a></li>
                 <li><a href="faq-section.html">FAQ</a></li>
                 <li><a href="mapa.html">Mapa</a></li>
@@ -144,40 +144,84 @@
         </section>
 
         <section class="artigos-lista" role="list">
+
+            <!-- ARTIGO 1 -->
             <article class="artigo-item receitas" role="listitem" tabindex="0"
                 aria-label="Artigo Receita: Hambúrguer artesanal clássico">
                 <img src="imagens/artigo1.jpg" alt="Hambúrguer artesanal clássico" class="artigo-img" />
+
                 <div class="artigo-conteudo">
                     <h2>Hambúrguer artesanal clássico: a receita perfeita</h2>
+
                     <p>Aprenda a preparar o hambúrguer artesanal perfeito com carne selecionada e segredos da nossa
                         casa.</p>
-                    <a href="#" class="btn-ler-mais" aria-label="Ler mais sobre hambúrguer artesanal clássico">Ler
-                        Mais</a>
+
+                    <!-- CONTEÚDO EXPANDIDO -->
+                    <div class="artigo-expandido">
+                        <p>
+                            O hambúrguer artesanal clássico começa com carne moída fresca, temperada apenas com sal e
+                            pimenta. O segredo está na selagem correta: fogo alto, superfície quente e virar apenas uma
+                            vez.
+                            Você também aprenderá como montar camadas perfeitas para um hambúrguer visualmente bonito,
+                            equilibrado e extremamente saboroso.
+                        </p>
+                    </div>
+
+                    <a href="#" class="btn-ler-mais">Ler Mais</a>
                 </div>
             </article>
 
+            <!-- ARTIGO 2 -->
             <article class="artigo-item curiosidades" role="listitem" tabindex="0"
                 aria-label="Artigo Curiosidades: Origem do hambúrguer">
                 <img src="imagens/artigo2.jpg" alt="História do hambúrguer" class="artigo-img" />
+
                 <div class="artigo-conteudo">
                     <h2>Curiosidades: a história por trás do hambúrguer</h2>
+
                     <p>Descubra as origens do hambúrguer e como ele conquistou o mundo com seu sabor icônico.</p>
-                    <a href="#" class="btn-ler-mais" aria-label="Ler mais sobre a história do hambúrguer">Ler Mais</a>
+
+                    <!-- CONTEÚDO EXPANDIDO -->
+                    <div class="artigo-expandido">
+                        <p>
+                            A história do hambúrguer remonta ao século XIX, quando imigrantes alemães trouxeram para a
+                            América o "bife de Hamburgo".
+                            Com o tempo, o lanche evoluiu, ganhou pão, molhos, acompanhamentos e se tornou um fenômeno
+                            cultural global — especialmente com a ascensão das lanchonetes e cultura pop.
+                        </p>
+                    </div>
+
+                    <a href="#" class="btn-ler-mais">Ler Mais</a>
                 </div>
             </article>
 
+            <!-- ARTIGO 3 -->
             <article class="artigo-item eventos" role="listitem" tabindex="0"
                 aria-label="Artigo Evento: Festival de hambúrgueres 2025">
                 <img src="imagens/artigo3.jpg" alt="Festival de hambúrgueres 2025" class="artigo-img" />
+
                 <div class="artigo-conteudo">
                     <h2>Festival de hambúrgueres 2025: o que esperar</h2>
+
                     <p>Prepare-se para o maior evento de hambúrguer artesanal com chefs renomados e muitas novidades.
                     </p>
-                    <a href="#" class="btn-ler-mais" aria-label="Ler mais sobre festival de hambúrgueres 2025">Ler
-                        Mais</a>
+
+                    <!-- CONTEÚDO EXPANDIDO -->
+                    <div class="artigo-expandido">
+                        <p>
+                            O Festival de Hambúrgueres 2025 contará com competições entre chefs, novas técnicas de
+                            churrasco, degustações guiadas, workshops de hambúrguer artesanal e estandes exclusivos.
+                            Será o maior evento já realizado, com ambiente temático, música ao vivo e experiências
+                            gastronômicas únicas.
+                        </p>
+                    </div>
+
+                    <a href="#" class="btn-ler-mais">Ler Mais</a>
                 </div>
             </article>
+
         </section>
+
 
         <nav class="paginacao" aria-label="Navegação da paginação do blog">
             <button class="pagina-btn" aria-label="Página anterior">&lt;</button>
@@ -231,6 +275,24 @@
                     const titulo = artigo.querySelector('h2').textContent.toLowerCase();
                     artigo.style.display = titulo.includes(termo) ? 'block' : 'none';
                 });
+            });
+        });
+        document.querySelectorAll('.btn-ler-mais').forEach(btn => {
+            btn.addEventListener('click', function (event) {
+                event.preventDefault();
+
+                const artigo = this.closest('.artigo-item');
+                const expandido = artigo.querySelector('.artigo-expandido');
+
+                if (expandido.style.display === "block") {
+                    expandido.style.display = "none";
+                    this.textContent = "Ler Mais";
+                    this.classList.remove("aberto");
+                } else {
+                    expandido.style.display = "block";
+                    this.textContent = "Ler Menos";
+                    this.classList.add("aberto");
+                }
             });
         });
     </script>

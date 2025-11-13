@@ -1,3 +1,6 @@
+/* ============================
+   CONFIGURAÇÕES GERAIS
+=============================*/
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     background: #ffeede;
@@ -5,111 +8,78 @@ body {
     padding: 0;
 }
 
-header {
-  font-family: sans-serif;
-  background-color: #ff7000;
-  padding: 25px 20px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: 0 4px 10px rgba(255,136,0,0.5);
-}
-/* Cards padrão claro */
-ul.produtos li {
-  background: #fff4dd;
-  border: 1px solid #ff8800;
-  color: #222;
-}
-
-/* Cards modo escuro */
-body.dark-mode ul.produtos li {
-  background: #252525;              /* Ou algum cinza escuro */
-  border: 1px solid #fb3b0b;        /* Cor de destaque escura */
-  color: #f9f9f9;                   /* Texto mais claro */
-}
-body.dark-mode main {
-  background: #222;                 /* Fundo principal escuro */
-  color: #f9f9f9;
-}
-body.dark-mode .titulo-principal-produtos {
-  color: #fb3b0b;                   /* Mantém destaque */
-}
-
-/* Se usar prefers-color-scheme, pode definir: */
-@media (prefers-color-scheme: dark_mode) {
-  ul.produtos li {
-    background: #252525;
-    border: 1px solid #fb3b0b;
-    color: #f9f9f9;
-  }
-  main {
-    background: #222;
-    color: #f9f9f9;
-  }
-}
-
-
 :root {
-  --primary-color: #ff7000;
-  --secondary-color: #fb3b0b;
-  --accent-color: #cc5500;
-  --background: #fff;
-}
-header {
-  background-color: var(--primary-color);
+    --primary-color: #ff7000;
+    --secondary-color: #fb3b0b;
+    --accent-color: #cc5500;
+    --background: #fff;
 }
 
-.titulo-principal-produtos {
-  color: var(--secondary-color);
-  text-shadow: 1px 2px 4px var(--accent-color);
-}
-.produto-preco {
-  color: var(--secondary-color);
+/* ============================
+   HEADER
+=============================*/
+header {
+    background-color: var(--primary-color);
+    padding: 25px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgba(255,136,0,0.5);
 }
 
 .titulo-principal {
-  font-size: 3em;
-  color: #fff;
-  text-shadow: 2px 3px 10px #d04000;
-  margin: 0 20px 10px 0;
-  font-weight: 900;
+    font-size: 3em;
+    color: #fff;
+    text-shadow: 2px 3px 10px #d04000;
+    margin: 0 20px 10px 0;
+    font-weight: 900;
 }
 
+/* ============================
+   MENU
+=============================*/
 nav ul {
-  display: flex;
-  gap: 35px;
-  padding: 0;
-  margin: 0;
-  list-style: none;
+    display: flex;
+    gap: 35px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 nav a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: 700;
-  font-size: 1.0em;
-  padding: 8px 16px;
-  border-radius: 20px;
-  transition: background-color 0.4s ease, color 0.4s ease;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1em;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-nav a.active, nav a:hover {
-  background-color: #ffe0b2;
-  color: #cc5500;
-  box-shadow: 0 0 8px #cc5500;
+nav a.active,
+nav a:hover {
+    background-color: #ffe0b2;
+    color: #cc5500;
+    box-shadow: 0 0 8px #cc5500;
 }
 
+/* ============================
+   BANNER
+=============================*/
 #banner {
-  width: 100%;
-  max-width: 200px;
-  margin-top: 20px;
-  border-radius: 25px;
-  box-shadow: 0 4px 20px rgba(255, 136, 0, 0.4);
+    width: 100%;
+    max-width: 200px;
+    margin-top: 20px;
+    border-radius: 25px;
+    box-shadow: 0 4px 20px rgba(255, 136, 0, 0.4);
 }
 
+/* ============================
+   CONTEÚDO PRINCIPAL
+=============================*/
 main {
-    width: 100%; 
+    width: 100%;
     max-width: 1000px;
     margin: 40px auto;
     padding: 25px;
@@ -118,9 +88,12 @@ main {
     box-shadow: 0 2px 20px rgba(0,0,0,0.09);
 }
 
+/* ============================
+   TÍTULO PRINCIPAL PRODUTOS
+=============================*/
 .titulo-principal-produtos {
     text-align: center;
-    color: #fb3b0b;
+    color: var(--secondary-color);
     font-size: 2.5em;
     font-weight: 700;
     text-transform: uppercase;
@@ -141,6 +114,9 @@ main {
     border-radius: 2px;
 }
 
+/* ============================
+   LISTA DE PRODUTOS
+=============================*/
 ul.produtos {
     display: flex;
     gap: 38px;
@@ -163,7 +139,7 @@ ul.produtos li {
 }
 
 ul.produtos li h3 {
-    color: #fb3b0b;
+    color: var(--secondary-color);
     font-size: 1.3em;
     margin-bottom: 10px;
 }
@@ -184,62 +160,93 @@ ul.produtos li img {
     margin: 12px 0;
     color: #222;
 }
+
 .produto-preco {
-    color: #fb3b0b;
+    color: var(--secondary-color);
     font-size: 1.23em;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
+/* ============================
+   FOOTER
+=============================*/
 footer {
-    background: #fb3b0b;
+    background: var(--secondary-color);
     color: #fff;
     text-align: center;
     padding: 15px 0;
     border-radius: 0 0 14px 14px;
     margin-top: 60px;
 }
+
 footer img {
     width: 100px;
     margin-bottom: 10px;
     border-radius: 14px;
 }
+
 .copyright {
     margin-top: 8px;
 }
 
+/* ============================
+   MODO ESCURO
+=============================*/
+body.dark-mode main {
+    background: #222;
+    color: #f9f9f9;
+}
+
+body.dark-mode ul.produtos li {
+    background: #252525;
+    border: 1px solid #fb3b0b;
+    color: #f9f9f9;
+}
+
+body.dark-mode .titulo-principal-produtos {
+    color: #fb3b0b;
+}
+
+/* Corrige regra inválida */
+@media (prefers-color-scheme: dark) {
+    body:not(.dark-mode) ul.produtos li {
+        background: #252525;
+        border: 1px solid #fb3b0b;
+        color: #f9f9f9;
+    }
+    body:not(.dark-mode) main {
+        background: #222;
+        color: #f9f9f9;
+    }
+}
+
+/* ============================
+   RESPONSIVIDADE
+=============================*/
 @media (max-width: 600px) {
     header {
         flex-direction: column;
-        align-items: center;
         text-align: center;
     }
+
     nav ul {
         flex-direction: column;
         gap: 12px;
         margin-top: 12px;
     }
+
     ul.produtos {
-        display: flex;
-        align-items: center;
         flex-direction: column;
-       
-    }
-    ul.produtos li {
-        display: flex;
         align-items: center;
-        justify-content: center;
+    }
+
+    ul.produtos li {
         width: 95%;
         max-width: 60%;
         padding: 10%;
     }
-    ul.produtos li h3 {
-        font-size: 1.1em;
-    }
-    ul.produtos li img {
-        max-width: 100%;
-        height: auto;
-    }
+
     .titulo-principal-produtos {
         font-size: 1.5em;
     }
